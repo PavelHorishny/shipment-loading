@@ -1,10 +1,16 @@
 package com.example.shipmentloading.shipment.domain;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
 import java.util.Objects;
 import java.util.UUID;
 
+@Getter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Shipment {
 
+    @EqualsAndHashCode.Include
     private final UUID id;
     private final String sourceOrderId;
     private final Dimensions dimensions;
@@ -61,22 +67,4 @@ public class Shipment {
         this.status = target;
     }
 
-
-    public UUID getId() { return id; }
-    public String getSourceOrderId() { return sourceOrderId; }
-    public Dimensions getDimensions() { return dimensions; }
-    public Weight getWeight() { return weight; }
-    public ShipmentStatus getStatus() { return status; }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Shipment other)) return false;
-        return id.equals(other.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
-    }
 }
