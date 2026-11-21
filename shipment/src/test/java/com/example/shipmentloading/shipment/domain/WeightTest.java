@@ -1,4 +1,4 @@
-package com.example.shipmentloading.domain;
+package com.example.shipmentloading.shipment.domain;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.example.shipmentloading.domain;
+package com.example.shipmentloading.shipment.domain;
 
 public record Dimensions(int lengthCm, int widthCm, int heightCm) {
 
